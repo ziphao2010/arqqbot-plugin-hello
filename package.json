@@ -1,0 +1,54 @@
+{
+  "name": "arqqbot-plugin-hello",
+  "version": "0.1.0",
+  "description": "收到 ping 时回复 pong，用于验证 ArQQbot 插件市场链路",
+  "type": "module",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "arqqbot",
+    "arqqbot-plugin",
+    "qq-bot",
+    "cordis"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ziphao2010/arqqbot-plugin-hello.git"
+  },
+  "homepage": "https://github.com/ziphao2010/arqqbot-plugin-hello#readme",
+  "bugs": {
+    "url": "https://github.com/ziphao2010/arqqbot-plugin-hello/issues"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "cordis": "4.0.0-rc.12",
+    "typescript": "^5.9.2"
+  },
+  "arqqbot": {
+    "id": "hello",
+    "displayName": "Ping 回复插件",
+    "description": "收到 ping 时被动回复 pong，用于验证插件市场发现与安装链路",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "reply": {
+          "type": "string",
+          "title": "回复内容",
+          "default": "pong"
+        }
+      }
+    },
+    "defaultConfig": {
+      "reply": "pong"
+    }
+  }
+}
